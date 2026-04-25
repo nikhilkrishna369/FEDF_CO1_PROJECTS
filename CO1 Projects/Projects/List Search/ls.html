@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input onkeyup="search()" placeholder="Search">
+
+<ul id="list">
+  <li>Apple</li>
+  <li>Mango</li>
+  <li>Banana</li>
+  <li>Orange</li>
+   <li>Grapes</li>
+    <li>Cherry</li>
+     <li>Blue Berry</li>
+      <li>Raspberry</li>
+       <li>Watermelon</li>
+        <li>Muskmelon</li>
+         <li>Dragonfruit</li>
+          <li>Jackfruit</li>
+           <li>Kiwi</li>
+            <li>Carrot</li>
+             <li>1</li>
+              <li>2</li>
+               <li>3</li>
+                <li>4</li>
+                 <li>5</li>
+                  <li>6</li>
+                   <li>7</li>
+                    <li>8</li>
+
+<!-- TASK ADD MORE ITEMS UPTO 20 -->
+</ul>
+
+<script>
+function search() {
+  let val = document.querySelector("input").value.toLowerCase();
+  document.querySelectorAll("li").forEach(li => {
+    li.style.display = li.innerText.toLowerCase().includes(val) ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
